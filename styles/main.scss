@@ -1,0 +1,58 @@
+/*******************
+     IMPORTS
+*******************/
+@import 'bourbon/bourbon';
+$visual-grid: false;
+@import 'neat/neat';
+/*******************
+      COLORS
+*******************/
+$celestial-blue: #47a3da;
+$concrete: #f5f5f1;
+$primary-color: $concrete;
+/*******************
+       FONTS
+*******************/
+$primary-font: Arial, helvetica, sans-serif;
+body {
+  font-family: $primary-font;
+  background-color: white;
+  margin: 0;
+}
+/*******************
+      LAYOUT
+*******************/
+header {
+  max-height: 49px;
+  margin: 0;
+  background-color: #f5f5f5;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.header-container {
+  margin: 0 auto;
+
+
+}
+
+.navigationLeft,
+.navigationCenter,
+.navigationRight {
+  width: 33%;
+}
+
+
+
+
+
+header img {
+  height: 28px;
+  width: 28px;
+  margin: 0 auto;
+}
+
+ul, li{
+  display: inline-block;
+  list-style: none;
+}

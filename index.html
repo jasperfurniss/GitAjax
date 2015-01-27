@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="bower_components/octicons/octicons/octicons.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+  <header>
+    <span class="header-container">
+
+        <span class="navigationLeft">
+          <img class="githubIcon" src="images/header-icon.png"/>
+          <input class="searchbox" type="text" placeholder="Search GitHub">
+        </span>
+
+        <ul class="navigationCenter">
+          <li>Explore</li>
+          <li>Gist</li>
+          <li>Blog</li>
+          <li>Help</li>
+        </ul>
+
+        <span class="navigationRight">
+          <img src="<% image %>"/>
+          <li><% name %></li>
+          <ul>
+            <li><span class="octicon octicon-plus"></span></li>
+            <li><span class="octicon octicon-inbox"></span></li>
+            <li><span class="octicon octicon-gear"></span></li>
+            <li><span class="octicon octicon-sign-out"></span></li>
+          </ul>
+        </span>
+
+    </span>
+  </header>
+
+  <ul class="word-list">
+  </ul>
+
+  <script type="text/template" class="word-list-item-template">
+    <li class="<%= name %>-bg">
+      <%= name %>
+    </li>
+  </script>
+  <script src="token.js"></script>
+  <script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+
+</body>
+
+</html>

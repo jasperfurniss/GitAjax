@@ -1,0 +1,53 @@
+/*******************
+     IMPORTS
+*******************/
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+/*******************
+      COLORS
+*******************/
+/*******************
+       FONTS
+*******************/
+body {
+  font-family: Arial, helvetica, sans-serif;
+  background-color: white;
+  margin: 0; }
+
+/*******************
+      LAYOUT
+*******************/
+header {
+  max-height: 49px;
+  margin: 0;
+  background-color: #f5f5f5;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.header-container {
+  margin: 0 auto; }
+
+.navigationLeft,
+.navigationCenter,
+.navigationRight {
+  width: 33%; }
+
+header img {
+  height: 28px;
+  width: 28px;
+  margin: 0 auto; }
+
+ul, li {
+  display: inline-block;
+  list-style: none; }
+
+/*# sourceMappingURL=main.css.map */
