@@ -17,13 +17,25 @@ html {
 /*******************
        FONTS
 *******************/
+/*********************************************************
+                *****  LAYOUT  ******
+*********************************************************/
 body {
-  font-family: Arial, helvetica, sans-serif;
+  font-family: Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 13px/1.4;
   background-color: white;
   margin: 0; }
 
+ul,
+li {
+  display: inline-block;
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
 /*******************
-      LAYOUT
+      Header
 *******************/
 header {
   max-height: 49px;
@@ -34,20 +46,126 @@ header {
   padding-bottom: 10px; }
 
 .header-container {
-  margin: 0 auto; }
+  margin: 0;
+  position: relative;
+  top: -13px;
+  width: 980px; }
 
-.navigationLeft,
-.navigationCenter,
-.navigationRight {
-  width: 33%; }
+.navigationLeft {
+  position: relative;
+  right: 105px; }
 
-header img {
+.octicon-mark-github {
   height: 28px;
   width: 28px;
+  font-size: 28px;
+  position: relative;
+  left: 60px; }
+  .octicon-mark-github:hover {
+    color: #4183c4; }
+
+input {
+  width: 360px;
+  height: 28px;
+  position: relative;
+  left: 60px; }
+
+.navigationCenter {
+  position: relative;
+  left: 15px;
+  top: -4px; }
+
+.navigationCenter li {
+  padding: 4px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #333;
+  position: relative;
+  right: 88px;
+  top: -2px; }
+  .navigationCenter li:hover {
+    color: #4183c4; }
+
+.navigationCenter ul {
+  position: relative;
+  right: 88px; }
+
+.navigationRight li:hover {
+  color: #4183c4; }
+
+.navigationRight img {
+  height: 20px;
+  width: 20px;
+  border-radius: 3px; }
+
+.loginlink {
+  display: inline-block;
+  max-width: 125px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: top;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #333; }
+
+/*******************
+      Sidebar
+*******************/
+.sidebar-container {
+  width: 230px;
+  margin-left: 190px; }
+
+.sidebar img {
+  width: 230px;
+  height: 230px;
+  border-radius: 6px; }
+
+.cardname {
+  width: 230px;
+  height: 54px; }
+
+.surname {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  font-size: 26px;
+  line-height: 30px;
+  text-overflow: ellipsis;
+  font-weight: bold; }
+
+.login {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  color: #666;
+  text-overflow: ellipsis; }
+
+/*******************
+    Repositories
+*******************/
+.repo-container {
+  width: 75%;
   margin: 0 auto; }
 
-ul, li {
-  display: inline-block;
-  list-style: none; }
+.repo-elements {
+  padding: 30px;
+  width: 730px;
+  height: 111px; }
+
+.repo-elements a {
+  text-decoration: none;
+  line-height: 1.2;
+  color: #4183c4;
+  font-size: 20px;
+  font-weight: bold; }
+  .repo-elements a:hover {
+    text-decoration: underline; }
 
 /*# sourceMappingURL=main.css.map */

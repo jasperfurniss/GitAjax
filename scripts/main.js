@@ -1,74 +1,60 @@
-(function(){
+(function() {
 
-"use strict";
+    var myGitHubAddress = "https://api.github.com/users/jasperfurniss";
+    var githubUrl = myGitHubAddress + "?access_token=" + window.token;
 
-var myGitHubAddress = "http://api.github.com/users/jasperfurniss/repos";
-var githubUrl = myGitHubAddress + "?access_token=" + window.token;
+    $(document).ready(function() {
 
-
-var repoData = $.ajax({
-url: "https://api.github.com/users/jasperfurniss/repos",
-}).done(function(data){
-console.log(data);
-});
-
-// var pull = function(locate){
-// $.ajax({
-//   url: "https://api.github.com/users/" + "username" + "/repos";
-//   name: locate.name,
-//   language: locate.language,
-//   starcount: locate.stargazers_count,
-//   forks: locate.forks
-// });
-//
-// };
+      if(typeof token !== 'undefined'){
+        $.ajaxSetup({
+          headers: { 'Authorization': 'token ' + token }
+        });
+      }
 
 
-});
+/********************  _.UNDERSCORE TEMPLATES._ ********************/
 
 
 
+                        /****** Header ******/
+
+
+    var headerTemplate = _.template($('[data-template-name=heading]').text());
+    var $heading = $('.heading');
+
+    $.ajax(
+      myGitHubAddress).done(function(header) {
+      $heading.append(headerTemplate(header));
+
+    });
 
 
 
+                       /****** Side Bar ******/
+
+
+    var sideTemplate = _.template($('[data-template-name=sidebar]').text());
+    var $sidebar = $('.sidebar');
+
+    $.ajax(
+      myGitHubAddress).done(function(side) {
+      $sidebar.append(sideTemplate(side));
+
+      });
 
 
 
+                      /****** Repo List ******/
 
 
+    var repoTemplate = _.template($('[data-template-name=repo]').text());
+    var $repositories = $('.repositories');
 
-
-
-
-//
-// var words = [{
-//   name: 'cool'
-// }, {
-//   name: 'wow'
-// }, {
-//   name: 'dumb'
-// }, {
-//   name: 'thank'
-// }];
-//
-// var foods = [{
-//   name: 'apple',
-//   color: 'red'
-// }, {
-//   name: 'pizza'
-// }, {
-//   name: 'pig ear sandwhich'
-// }, {
-//   name: 'sausage'
-// }];
-//
-// var wordListItemTemplate = _.template($('.word-list-item-template').text());
-//
-// words.forEach(function(word) {
-//   $('.word-list').append(wordListItemTemplate(word));
-// });
-//
-//
-// foods.forEach(function(food) {
-//   $('.word-list').append(wordListItemTemplate(food));
-// });
+    $.ajax(
+      myGitHubAddress + "/repos").done(function(repos) {
+      _.each(repos, function(repo) {
+        $repositories.append(repoTemplate(repo));
+      });
+      });
+      });
+      })();
